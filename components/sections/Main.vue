@@ -1,6 +1,7 @@
 <template>
 	<main>
 		<h1>Hello, I'm Samuel</h1>
+		<p> Test </p>
 	</main>
 </template>
 
