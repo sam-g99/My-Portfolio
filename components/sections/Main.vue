@@ -4,7 +4,7 @@
 			<h1 ref="test" data-scroll>Hello, I'm Samuel.</h1>
 			<p>Your friendly earthling web developer.</p>
 			<div class="action-buttons">
-				<button>Scroll Down</button>
+				<button @click="scrollToSkills">Scroll Down</button>
 				<a
 					href="http://github.com/sam-g99"
 					target="_blank"
@@ -18,7 +18,14 @@
 </template>
 
 <script>
-export default {};
+import zenscroll from 'zenscroll';
+export default {
+	methods: {
+		scrollToSkills() {
+			zenscroll.toY(500);
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +50,7 @@ main {
 	text-align: center;
 	margin-top: 50px;
 	@include breakpoint(1300) {
-		margin-top: -0px;
+		margin-top: -40px;
 	}
 }
 h1 {
@@ -62,7 +69,7 @@ p {
 	font-size: 16px;
 	font-weight: 400;
 	color: $black;
-	margin-top: 5px;
+	margin-top: 15px;
 	@include breakpoint(400) {
 		font-size: 20px;
 	}
@@ -70,19 +77,20 @@ p {
 		font-size: 22px;
 	}
 }
-$padding: 15px;
+$padding: 14px;
 button {
 	border: none;
 	background: white;
 	color: $green;
 	font-size: 20px;
 	padding: $padding;
-	width: 150px;
+	width: 170px;
 	border-radius: 3px;
 	transition: transform 0.2s;
+	font-weight: 500;
 	cursor: pointer;
 	outline: none;
-	margin-right: 30px;
+	margin-right: 40px;
 	&:hover {
 		transform: scale(1.2);
 	}
@@ -93,7 +101,7 @@ button {
 .action-buttons {
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 a {
 	display: inline-block;
@@ -105,6 +113,7 @@ a {
 	font-size: 20px;
 	transition: transform 0.2s;
 	border-radius: 5px;
+	width: 170px;
 	&:hover {
 		transform: scale(1.2);
 	}
