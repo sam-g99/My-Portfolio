@@ -1,7 +1,9 @@
 <template>
 	<main>
-		<h1>Hello, I'm Samuel</h1>
-		<p>Test</p>
+		<div class="content">
+			<h1>Hello, I'm Samuel</h1>
+			<p>Your friendly earthling web developer</p>
+		</div>
 	</main>
 </template>
 
@@ -11,7 +13,25 @@ export default {};
 
 <style lang="scss" scoped>
 @import '@/assets/css/main.scss';
-.gottem {
-	margin: 90em;
+main {
+	background: $yellow;
+	height: 100vh;
+	width: 100%;
+	padding: 10px;
+}
+h1 {
+	font-size: 9vw;
+	/* Limit font size decrease */
+	@include breakpoint-max(375) {
+		font-size: 34px;
+	}
+	/* Limit font size increase */
+	@include breakpoint(780) {
+		font-size: 70px;
+	}
+}
+p {
+	font-size: 16px;
+	font-weight: 400;
 }
 </style>
