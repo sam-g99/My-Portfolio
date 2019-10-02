@@ -25,8 +25,12 @@ main {
 		justify-content: center;
 		min-height: 500px;
 	}
+	@include filtered-background('../../assets/images/vscode.png');
 }
+
 .content {
+	z-index: 5;
+	position: relative;
 	text-align: center;
 	margin-top: 50px;
 	@include breakpoint(1300) {

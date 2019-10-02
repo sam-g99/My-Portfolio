@@ -10,6 +10,31 @@
     margin-bottom: 0;
   }
 }
+@mixin pseudo-element {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@mixin filtered-background($image-url) {
+  position: relative;
+  color: white;
+  &:before {
+    @include pseudo-element;
+    background: url($image-url);
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 1;
+  }
+  &:after {
+    @include pseudo-element;
+    background: $yellow;
+    opacity: 0.90;
+    z-index: 2;
+  }
+}
 @mixin two-row($spacing) {
   flex-basis: calc(50% - #{$spacing});
   flex-grow: 1;
