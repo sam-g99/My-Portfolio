@@ -3,6 +3,7 @@
 		<Main />
 		<Projects />
 		<Skills />
+		<Contact />
 	</div>
 </template>
 
@@ -10,9 +11,10 @@
 import Main from '~/components/sections/Main';
 import Projects from '~/components/sections/Projects';
 import Skills from '~/components/sections/Skills';
+import Contact from '~/components/sections/Contact';
 
 export default {
-	components: { Main, Projects, Skills },
+	components: { Main, Projects, Skills, Contact },
 };
 </script>
 
