@@ -4,7 +4,8 @@
 	</div>
 </template>
 
-<style>
+<style lang="scss">
+@import '@/assets/css/main.scss';
 html {
 	font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,5 +52,24 @@ html {
 .button--grey:hover {
 	color: #fff;
 	background-color: #35495e;
+}
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 </style>
