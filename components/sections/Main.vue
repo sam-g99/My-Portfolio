@@ -19,6 +19,16 @@ main {
 	width: 100%;
 	padding: 10px;
 }
+.content {
+	@include breakpoint(800) {
+		margin-top: 30px;
+		margin-left: 30px;
+	}
+	@include breakpoint(1400) {
+		margin-top: 100px;
+		margin-left: 100px;
+	}
+}
 h1 {
 	font-size: 9vw;
 	/* Limit font size decrease */
