@@ -3,7 +3,16 @@
 		<div class="content">
 			<h1 ref="test" data-scroll>Hello, I'm Samuel.</h1>
 			<p>Your friendly earthling web developer.</p>
-			<button>Get Started</button>
+			<div class="action-buttons">
+				<button>Scroll Down</button>
+				<a
+					href="http://github.com/sam-g99"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					View Github
+				</a>
+			</div>
 		</div>
 	</main>
 </template>
@@ -34,7 +43,7 @@ main {
 	text-align: center;
 	margin-top: 50px;
 	@include breakpoint(1300) {
-		margin-top: -150px;
+		margin-top: -0px;
 	}
 }
 h1 {
@@ -61,29 +70,46 @@ p {
 		font-size: 22px;
 	}
 }
+$padding: 15px;
 button {
 	border: none;
 	background: white;
 	color: $green;
 	font-size: 20px;
-	padding: 15px;
+	padding: $padding;
 	width: 150px;
 	border-radius: 3px;
-	margin-top: 20px;
-	box-shadow: 0px 4px 4px rgba(54, 54, 54, 0.178);
 	transition: transform 0.2s;
 	cursor: pointer;
 	outline: none;
+	margin-right: 30px;
 	&:hover {
 		transform: scale(1.2);
 	}
-}
-@keyframes float {
-	0% {
-		transform: translateY(-5px);
+	&:active {
+		transform: scale(1);
 	}
-	100% {
-		transform: translateY(5px);
+}
+.action-buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+a {
+	display: inline-block;
+	border: 2px solid $black;
+	color: $black;
+	text-decoration: none;
+	padding: $padding;
+	font-weight: 500;
+	font-size: 20px;
+	transition: transform 0.2s;
+	border-radius: 5px;
+	&:hover {
+		transform: scale(1.2);
+	}
+	&:active {
+		transform: scale(1);
 	}
 }
 </style>
