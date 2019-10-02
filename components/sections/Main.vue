@@ -3,6 +3,7 @@
 		<div class="content">
 			<h1 ref="test" data-scroll>Hello, I'm Samuel.</h1>
 			<p>Your friendly earthling web developer.</p>
+			<button>Get Started</button>
 		</div>
 	</main>
 </template>
@@ -54,6 +55,31 @@ p {
 	}
 	@include breakpoint(600) {
 		font-size: 22px;
+	}
+}
+button {
+	border: none;
+	background: white;
+	color: $green;
+	font-size: 20px;
+	padding: 15px;
+	width: 150px;
+	border-radius: 3px;
+	margin-top: 20px;
+	box-shadow: 0px 4px 4px rgba(54, 54, 54, 0.178);
+	transition: transform 0.2s;
+	cursor: pointer;
+	outline: none;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+@keyframes float {
+	0% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(5px);
 	}
 }
 </style>
