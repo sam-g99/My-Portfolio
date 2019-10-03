@@ -33,7 +33,7 @@ export default {
 	},
 	methods: {
 		scrollToSkills() {
-			zenscroll.toY(600);
+			zenscroll.to(document.getElementById('skills'));
 		},
 	},
 };
