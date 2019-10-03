@@ -46,12 +46,10 @@ main {
 	height: 100vh;
 	width: 100%;
 	padding: 10px;
-	@include breakpoint-with-height(900) {
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-		min-height: 500px;
-	}
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	min-height: 370px;
 	@include filtered-background('../../assets/images/vscode.png');
 }
 
@@ -119,7 +117,6 @@ a {
 	border-radius: 3px;
 	font-size: 20px;
 	max-width: 350px;
-
 	@include breakpoint-with-height(900) {
 		height: 60px;
 		width: 170px;
