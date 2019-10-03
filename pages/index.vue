@@ -1,8 +1,8 @@
 <template>
 	<div class="container">
 		<Main />
-		<Projects />
 		<Skills />
+		<Projects />
 		<Contact />
 	</div>
 </template>

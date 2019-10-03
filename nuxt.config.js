@@ -4,17 +4,18 @@ export default {
 	 ** Headers of the page
 	 */
 	head: {
-		title: process.env.npm_package_name || '',
+		title: 'Samuel Graham Web Developer',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{
 				hid: 'description',
 				name: 'description',
-				content: 'Web developer portfolio. Samuel Graham.',
+				content:
+					"Hello, I'm Samuel and this site is to show some of my skills and work.",
 			},
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
 	},
 	server: {
 		port: 8000,

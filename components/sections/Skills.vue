@@ -1,12 +1,18 @@
 <template>
 	<section>
-		<div v-for="list in lists" :key="list.title">
-			<hX>{{ list.title }}</hX>
-			<ul>
-				<li v-for="skill in list.skills" :key="skill">
-					{{ skill }}
-				</li>
-			</ul>
+		<div class="content">
+			<h2>Skills</h2>
+			<div class="divide"></div>
+			<div class="lists-container">
+				<div v-for="list in lists" :key="list.title" class="list">
+					<h3>{{ list.title }}</h3>
+					<div class="skills">
+						<p v-for="skill in list.skills" :key="skill">
+							{{ skill }}
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </template>
@@ -30,13 +36,14 @@ export default {
 					],
 				},
 				{
-					title: 'Build Tools',
-					skills: ['Gulp', 'Webpack'],
-				},
-				{
 					title: 'Back End',
 					skills: ['Node JS', 'MongoDB'],
 				},
+				{
+					title: 'Build Tools',
+					skills: ['Gulp', 'Webpack'],
+				},
+
 				{
 					title: 'Design Tools',
 					skills: ['Figma', 'Adobe XD'],
@@ -49,4 +56,77 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/css/main.scss';
+.content {
+	padding: 10px;
+	margin: 0 auto;
+	max-width: 1400px;
+	position: relative;
+	margin-top: 15px;
+}
+.lists-container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 0 auto;
+	@include breakpoint(900) {
+		flex-flow: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+}
+.list {
+	text-align: center;
+	@include vertical-spacing(20px);
+	@include breakpoint(900) {
+		margin: 0;
+		flex-basis: calc(50% - 20px);
+		margin: 10px;
+	}
+}
+h2 {
+	font-weight: 500;
+	font-size: 50px;
+	color: $darkBlue;
+	text-align: center;
+	@include breakpoint(900) {
+		text-align: left;
+	}
+}
+.divide {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width: 50px;
+	@include breakpoint(900) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+h3 {
+	font-weight: 500;
+	background: $darkBlue;
+	color: white;
+	font-size: 7.5vw;
+	@include breakpoint(400) {
+		font-size: 30px;
+	}
+}
+
+.skills {
+	background: $lightGray;
+	p {
+		font-size: 7vw;
+		@include vertical-spacing(15px);
+		font-weight: 400;
+		color: $black;
+		@include breakpoint(375) {
+			font-size: 26px;
+		}
+	}
+}
+.skills,
+h3 {
+	padding: 10px;
+}
 </style>

@@ -120,12 +120,6 @@ a {
 	@include breakpoint-with-height(900) {
 		height: 60px;
 		width: 170px;
-		&:hover {
-			transform: scale(1.2);
-		}
-		&:active {
-			transform: scale(1);
-		}
 	}
 }
 button {
@@ -134,6 +128,12 @@ button {
 	color: $green;
 	cursor: pointer;
 	outline: none;
+	&:hover {
+		transform: scale(1.2);
+	}
+	&:active {
+		transform: scale(1);
+	}
 	@include breakpoint-with-height(900) {
 		margin-right: 40px;
 	}
@@ -147,6 +147,14 @@ a {
 	margin-top: 20px;
 	@include breakpoint-with-height(900) {
 		margin-top: 0;
+		&:hover {
+			transform: scale(1.2);
+			background: $black;
+			color: white;
+		}
+		&:active {
+			transform: scale(1);
+		}
 	}
 }
 </style>

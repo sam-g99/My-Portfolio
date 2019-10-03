@@ -72,4 +72,11 @@ html {
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+.divide {
+	width: 30px;
+	height: 4px;
+	background: #ccc;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
 </style>

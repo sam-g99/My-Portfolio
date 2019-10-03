@@ -45,7 +45,13 @@
 }
 
 //MEDIA QUERIES
+@mixin breakpoint-with-height($size) {
+  @media only screen and (min-width: $size + px), only screen and (min-height: 1000px) {
+    @content;
+  }
+}
 @mixin breakpoint($size) {
+
   @media only screen and (min-width: $size + px) {
     @content;
   }

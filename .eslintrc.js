@@ -19,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "vue/attribute-hyphenation": 0,
     "prettier/prettier": ["error", { 
 			"singleQuote": true,
 			"useTabs": true,
