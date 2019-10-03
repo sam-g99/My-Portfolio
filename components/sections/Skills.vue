@@ -64,14 +64,14 @@ export default {
 	margin-top: 15px;
 }
 .lists-container {
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	margin: 0 auto;
+	display: grid;
 	@include breakpoint(900) {
-		flex-flow: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
+		grid-template-columns: auto auto;
+		grid-gap: 10px;
+	}
+	@include breakpoint(1000) {
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
 	}
 }
 .list {
@@ -79,8 +79,6 @@ export default {
 	@include vertical-spacing(20px);
 	@include breakpoint(900) {
 		margin: 0;
-		flex-basis: calc(50% - 20px);
-		margin: 10px;
 	}
 }
 h2 {
