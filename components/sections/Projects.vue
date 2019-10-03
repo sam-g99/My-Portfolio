@@ -64,7 +64,7 @@ export default {
 					name: 'Time Zones Made Simple',
 					mainLang: ['React', 'Moment.js'],
 					description:
-						'Single page application which creates links that help people know when an event is happening in their time. Using React and Moment JS.',
+						'Single page application which creates links that help people know when an event is happening in their time.',
 					live: 'https://priceless-goldberg-a9cfed.netlify.com/',
 					code: 'https://github.com/sam-g99/Time-Zones-Made-Simple',
 					image: 'timezones',
