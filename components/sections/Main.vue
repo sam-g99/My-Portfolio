@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main :style="{ height: `${windowHeight}px` }">
 		<div class="content">
 			<h1 ref="test" data-scroll>Hello, I'm Samuel.</h1>
 			<p>Your friendly earthling web developer.</p>
@@ -20,6 +20,17 @@
 <script>
 import zenscroll from 'zenscroll';
 export default {
+	data: () => {
+		return {
+			windowHeight: '100vh',
+		};
+	},
+	mounted() {
+		this.windowHeight = window.innerHeight;
+		window.addEventListener('resize', () => {
+			this.windowHeight = document.documentElement.clientHeight;
+		});
+	},
 	methods: {
 		scrollToSkills() {
 			zenscroll.toY(600);
@@ -58,10 +69,11 @@ main {
 }
 h1 {
 	font-size: 10vw;
-	margin-top: 50px;
+	margin-top: 30px;
 	color: $black;
 	/* Limit font size decrease */
 	@include breakpoint-max(375) {
+		margin-top: 50;
 		font-size: 34px;
 	}
 	/* Limit font size increase */
@@ -87,7 +99,7 @@ p {
 	margin-top: auto;
 	align-items: center;
 	margin-top: auto;
-	margin-bottom: 90px;
+	margin-bottom: 30px;
 	@include breakpoint(900) {
 		justify-content: center;
 		flex-flow: row;
