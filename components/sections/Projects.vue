@@ -36,7 +36,7 @@ export default {
 			projects: [
 				{
 					name: "Ivel's Personal Training",
-					mainLang: ['Nuxt', 'Scss'],
+					mainLang: ['Nuxt', 'SCSS'],
 					description:
 						'Landing page created for a client. Used Figma for designing and Nuxt to build it.',
 					live: 'https://ivelspersonaltraining.com/',
@@ -44,7 +44,7 @@ export default {
 				},
 				{
 					name: 'PSD Template',
-					mainLang: ['Gulp', 'Scss'],
+					mainLang: ['Gulp', 'SCSS'],
 					description:
 						'Developed a site based on a free PSD template. Utilized Gulp and SCSS.',
 					live: 'https://upbeat-shockley-d4c443.netlify.com/',
