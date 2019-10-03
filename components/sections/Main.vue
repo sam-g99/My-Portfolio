@@ -35,7 +35,7 @@ main {
 	height: 100vh;
 	width: 100%;
 	padding: 10px;
-	@include breakpoint(1300) {
+	@include breakpoint(900) {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
@@ -48,13 +48,17 @@ main {
 	z-index: 5;
 	position: relative;
 	text-align: center;
-	margin-top: 50px;
-	@include breakpoint(1300) {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	@include breakpoint(900) {
+		height: auto;
 		margin-top: -40px;
 	}
 }
 h1 {
 	font-size: 10vw;
+	margin-top: 50px;
 	color: $black;
 	/* Limit font size decrease */
 	@include breakpoint-max(375) {
@@ -79,22 +83,37 @@ p {
 }
 .action-buttons {
 	display: flex;
-	justify-content: center;
-	margin-top: 35px;
+	flex-flow: column;
+	margin-top: auto;
+	align-items: center;
+	margin-top: auto;
+	margin-bottom: 90px;
+	@include breakpoint(900) {
+		justify-content: center;
+		flex-flow: row;
+		margin-top: 35px;
+		margin-bottom: 0;
+	}
 }
 button,
 a {
+	width: 100%;
 	font-weight: 500;
 	padding: 15px;
 	transition: transform 0.2s;
-	width: 170px;
 	border-radius: 3px;
 	font-size: 20px;
-	&:hover {
-		transform: scale(1.2);
-	}
-	&:active {
-		transform: scale(1);
+	max-width: 350px;
+
+	@include breakpoint(900) {
+		height: 60px;
+		width: 170px;
+		&:hover {
+			transform: scale(1.2);
+		}
+		&:active {
+			transform: scale(1);
+		}
 	}
 }
 button {
@@ -103,7 +122,9 @@ button {
 	color: $green;
 	cursor: pointer;
 	outline: none;
-	margin-right: 40px;
+	@include breakpoint(900) {
+		margin-right: 40px;
+	}
 }
 
 a {
@@ -111,5 +132,9 @@ a {
 	border: 2px solid $black;
 	color: $black;
 	text-decoration: none;
+	margin-top: 20px;
+	@include breakpoint(900) {
+		margin-top: 0;
+	}
 }
 </style>
