@@ -128,14 +128,14 @@ button {
 	color: $green;
 	cursor: pointer;
 	outline: none;
-	&:hover {
-		transform: scale(1.2);
-	}
-	&:active {
-		transform: scale(1);
-	}
 	@include breakpoint-with-height(900) {
 		margin-right: 40px;
+		&:hover {
+			transform: scale(1.2);
+		}
+		&:active {
+			transform: scale(1);
+		}
 	}
 }
 
