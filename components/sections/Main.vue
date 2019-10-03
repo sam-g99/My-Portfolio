@@ -46,7 +46,7 @@ main {
 	height: 100vh;
 	width: 100%;
 	padding: 10px;
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		display: flex;
 		flex-flow: column;
 		justify-content: center;
@@ -62,7 +62,7 @@ main {
 	height: 100%;
 	display: flex;
 	flex-flow: column;
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		height: auto;
 		margin-top: -40px;
 	}
@@ -74,7 +74,7 @@ h1 {
 	/* Limit font size decrease */
 	@include breakpoint-max(375) {
 		margin-top: 50;
-		font-size: 34px;
+		font-size: 39px;
 	}
 	/* Limit font size increase */
 	@include breakpoint(780) {
@@ -86,6 +86,9 @@ p {
 	font-weight: 400;
 	color: $black;
 	margin-top: 15px;
+	@include breakpoint(375) {
+		font-size: 18px;
+	}
 	@include breakpoint(400) {
 		font-size: 20px;
 	}
@@ -100,7 +103,7 @@ p {
 	align-items: center;
 	margin-top: auto;
 	margin-bottom: 30px;
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		justify-content: center;
 		flex-flow: row;
 		margin-top: 35px;
@@ -117,7 +120,7 @@ a {
 	font-size: 20px;
 	max-width: 350px;
 
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		height: 60px;
 		width: 170px;
 		&:hover {
@@ -134,7 +137,7 @@ button {
 	color: $green;
 	cursor: pointer;
 	outline: none;
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		margin-right: 40px;
 	}
 }
@@ -145,7 +148,7 @@ a {
 	color: $black;
 	text-decoration: none;
 	margin-top: 20px;
-	@include breakpoint(900) {
+	@include breakpoint-with-height(900) {
 		margin-top: 0;
 	}
 }
