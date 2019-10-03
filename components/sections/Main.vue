@@ -22,7 +22,7 @@ import zenscroll from 'zenscroll';
 export default {
 	methods: {
 		scrollToSkills() {
-			zenscroll.toY(500);
+			zenscroll.toY(600);
 		},
 	},
 };
@@ -77,48 +77,39 @@ p {
 		font-size: 22px;
 	}
 }
-$padding: 14px;
-button {
-	border: none;
-	background: white;
-	color: $green;
-	font-size: 20px;
-	padding: $padding;
-	width: 170px;
-	border-radius: 3px;
-	transition: transform 0.2s;
-	font-weight: 500;
-	cursor: pointer;
-	outline: none;
-	margin-right: 40px;
-	&:hover {
-		transform: scale(1.2);
-	}
-	&:active {
-		transform: scale(1);
-	}
-}
 .action-buttons {
 	display: flex;
 	justify-content: center;
 	margin-top: 35px;
 }
+button,
 a {
-	display: inline-block;
-	border: 2px solid $black;
-	color: $black;
-	text-decoration: none;
-	padding: $padding;
 	font-weight: 500;
-	font-size: 20px;
+	padding: 15px;
 	transition: transform 0.2s;
-	border-radius: 5px;
 	width: 170px;
+	border-radius: 3px;
+	font-size: 20px;
 	&:hover {
 		transform: scale(1.2);
 	}
 	&:active {
 		transform: scale(1);
 	}
+}
+button {
+	border: none;
+	background: white;
+	color: $green;
+	cursor: pointer;
+	outline: none;
+	margin-right: 40px;
+}
+
+a {
+	display: inline-block;
+	border: 2px solid $black;
+	color: $black;
+	text-decoration: none;
 }
 </style>
