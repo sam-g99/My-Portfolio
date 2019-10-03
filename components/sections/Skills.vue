@@ -27,12 +27,12 @@ export default {
 					skills: [
 						'HTML',
 						'CSS',
+						'Sass/Scss',
 						'JavaScript',
 						'Jquery',
 						'React',
 						'Vue',
 						'Nuxt',
-						'SASS/SCSS',
 					],
 				},
 				{
