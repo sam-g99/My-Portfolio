@@ -27,7 +27,7 @@ export default {
 					skills: [
 						'HTML',
 						'CSS',
-						'Sass/Scss',
+						'Sass/SCSS',
 						'JavaScript',
 						'Jquery',
 						'React',
