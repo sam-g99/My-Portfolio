@@ -29,7 +29,6 @@ export default {
 						'CSS',
 						'Sass/SCSS',
 						'JavaScript',
-						'Jquery',
 						'React',
 						'Vue',
 						'Nuxt',
